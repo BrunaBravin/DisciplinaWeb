@@ -12,6 +12,7 @@ class CalculoImc extends Model
         $peso = $_GET['peso'];
 
         $imc = $peso / ($altura * $altura);
+        $imc = number_format($imc, 2, '.', '');
         return $imc;
     }
 }
